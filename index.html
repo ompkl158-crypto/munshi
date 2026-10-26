@@ -4,37 +4,176 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Munshi AI - منشی اے آئی</title>
-    <link rel="stylesheet" href="app.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+        body {
+            background-color: #0b0f19;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+        .header {
+            border-bottom: 1px solid #1f293d;
+            padding: 20px 40px;
+        }
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+            background: linear-gradient(90deg, #fff, #a5b4fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+        }
+        .nav-links a {
+            color: #9ca3af;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .nav-btn {
+            background: #4f46e5;
+            color: #fff !important;
+            padding: 8px 16px;
+            border-radius: 6px;
+        }
+        .hero {
+            max-width: 900px;
+            margin: 80px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+        .hero-badge {
+            color: #34d399;
+            font-size: 12px;
+            letter-spacing: 2px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            color: #f3f4f6;
+        }
+        .hero-sub {
+            font-size: 18px;
+            color: #9ca3af;
+            max-width: 700px;
+            margin: 0 auto 30px auto;
+        }
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .btn-primary {
+            background: #a5f3fc;
+            color: #0b0f19;
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .btn-secondary {
+            background: #1f293d;
+            color: #fff;
+            padding: 12px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+        }
+        .features {
+            max-width: 1100px;
+            margin: 100px auto;
+            padding: 0 20px;
+        }
+        .features h2 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+        .section-desc {
+            color: #9ca3af;
+            margin-bottom: 40px;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background: #111827;
+            border: 1px solid #1f293d;
+            padding: 30px;
+            border-radius: 12px;
+        }
+        .card-num {
+            color: #4f46e5;
+            font-weight: bold;
+            font-size: 14px;
+            display: block;
+            margin-bottom: 15px;
+        }
+        .card h3 {
+            font-size: 16px;
+            color: #9ca3af;
+            margin-bottom: 5px;
+        }
+        .card h4 {
+            font-size: 20px;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+        .card p {
+            color: #9ca3af;
+            font-size: 14px;
+        }
+        .footer {
+            border-top: 1px solid #1f293d;
+            padding: 60px 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            color: #9ca3af;
+            font-size: 14px;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    <!-- Header / Nav -->
     <header class="header">
         <div class="nav-container">
             <div class="logo">Munshi AI</div>
             <nav class="nav-links">
                 <a href="#what-it-does">What it does</a>
-                <a href="#how-it-works">How it works</a>
                 <a href="#plans">Plans</a>
-                <a href="#faq">FAQ</a>
                 <a href="#get-started" class="nav-btn">Get started</a>
             </nav>
         </div>
     </header>
 
-    <!-- Hero Section -->
     <section class="hero">
         <div class="hero-badge">BUILT FOR PAKISTAN</div>
         <h1>Your capable digital munshi.</h1>
         <p class="hero-sub">From a polished CV to a clearer Urdu letter, a better product listing or help with tomorrow's exam—Munshi AI meets you in the language of the task.</p>
-        
         <div class="hero-buttons">
-            <a href="#start" class="btn-primary">Start a conversation ↗</a>
+            <a href="#" class="btn-primary">Start a conversation ↗</a>
             <a href="#what-it-does" class="btn-secondary">See what it can do ↓</a>
         </div>
-        <p class="hero-note">Urdu script when you write in Urdu • Practical, Pakistan-aware help</p>
     </section>
 
-    <!-- Features Grid Section -->
     <section class="features" id="what-it-does">
         <h2>Work that starts with the right prompt.</h2>
         <p class="section-desc">Munshi is designed around the situations Pakistani users face—not a blank page with a clever answer.</p>
@@ -44,13 +183,13 @@
                 <span class="card-num">01</span>
                 <h3>Everyday Questions</h3>
                 <h4>Ask clearly. Get practical next steps.</h4>
-                <p>Get help making sense of daily-life questions in Pakistan. For current news, fuel, gold and exchange-rate questions, Munshi looks for current sources and names the date and source it finds.</p>
+                <p>Get help making sense of daily-life questions in Pakistan for current news, fuel, and exchange rates.</p>
             </div>
             <div class="card">
                 <span class="card-num">02</span>
                 <h3>Job Search</h3>
                 <h4>CVs that stay true to your experience.</h4>
-                <p>Build a clean, ATS-friendly CV or cover letter without invented employers, degrees or achievements.</p>
+                <p>Build a clean, ATS-friendly CV or cover letter without invented employers or achievements.</p>
             </div>
             <div class="card">
                 <span class="card-num">03</span>
@@ -58,80 +197,11 @@
                 <h4>Turn an idea into a watchable plan.</h4>
                 <p>Create honest titles, punchy Urdu scripts and detailed prompts for AI video clips.</p>
             </div>
-            <div class="card">
-                <span class="card-num">04</span>
-                <h3>Small Business</h3>
-                <h4>Words that help your listing earn attention.</h4>
-                <p>Write straightforward product copy for Daraz, OLX, Shopify, Facebook, Instagram and WhatsApp.</p>
-            </div>
-            <div class="card">
-                <span class="card-num">05</span>
-                <h3>Study Support</h3>
-                <h4>Learn the idea, not just the answer.</h4>
-                <p>Break down difficult text, revise a topic or create MCQs in language that feels manageable.</p>
-            </div>
-            <div class="card urdu-card">
-                <span class="card-num">06</span>
-                <h3>Urdu Writing</h3>
-                <h4>صاف، فطری، درست اردو۔</h4>
-                <p>Polish a translation, letter, application or message with natural Urdu grammar and punctuation.</p>
-            </div>
         </div>
     </section>
 
-    <!-- Pricing / Plans Section -->
-    <section class="plans" id="plans">
-        <p class="badge-small">PICK YOUR PACE</p>
-        <h2>Start free. Step up when Munshi becomes part of the routine.</h2>
-        
-        <div class="pricing-grid">
-            <div class="price-card">
-                <h3>FREE</h3>
-                <h4>Try the everyday essential.</h4>
-                <p>A simple way to see how Munshi fits your questions, writing and planning.</p>
-                <ul>
-                    <li>✓ Access to Munshi AI</li>
-                    <li>✓ A daily free-use allowance</li>
-                    <li>✓ Pakistan-focused responses</li>
-                    <li>✓ Urdu and English support</li>
-                </ul>
-                <a href="#get-started" class="plan-btn">Get started →</a>
-            </div>
-            <div class="price-card pro-card">
-                <div class="pro-tag">RECOMMENDED</div>
-                <h3>PRO</h3>
-                <h4>Keep your workflow moving.</h4>
-                <p>For regular users who need more room for focused work, with a signed license key to verify access.</p>
-                <ul>
-                    <li>✓ Everything in Free</li>
-                    <li>✓ Expanded daily use</li>
-                    <li>✓ Signed license-key access</li>
-                    <li>✓ Built for ongoing work</li>
-                </ul>
-                <a href="#get-started" class="plan-btn pro-btn">Ask about Pro →</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
     <footer class="footer">
-        <div class="footer-col">
-            <h3>Munshi AI</h3>
-            <p>Practical AI help for Pakistan, in the language you use.</p>
-        </div>
-        <div class="footer-col">
-            <h4>QUICK LINKS</h4>
-            <a href="#what-it-does">What it does</a>
-            <a href="#how-it-works">How it works</a>
-            <a href="#plans">Plans</a>
-            <a href="#faq">FAQ</a>
-            <a href="#get-started">Get started</a>
-        </div>
-        <div class="footer-col">
-            <h4>LEGAL</h4>
-            <p>© 2026 Munshi AI. All rights reserved.</p>
-        </div>
+        <p>© 2026 Munshi AI. All rights reserved. Practical AI help for Pakistan.</p>
     </footer>
 </body>
 </html>
-
